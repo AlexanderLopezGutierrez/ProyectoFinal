@@ -1,0 +1,6 @@
+#map {
+    height: 400px;
+    width: 30%; /* Cambia el valor según sea necesario */
+    float: right;
+    margin-top: 20px;
+}

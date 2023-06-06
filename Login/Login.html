@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Inicio de Sesión</title>
+  <link rel="stylesheet" type="text/css" href="../Styles/Login.css">
+</head>
+<body>
+  <div id="alert-container"></div> <!-- Nuevo elemento para mostrar las alertas -->
+  <header>
+    <h1>Bienvenido a nuestro E-commerce de Artesanías</h1>
+    <p>Descubre y adquiere increíbles creaciones hechas a mano</p>
+</header>
+  <div class="container">
+    <h2>Formulario de Inicio de Sesión</h2>
+    <form id="transactionFom" action="../home.html" method="POST">
+      <input type="text" id="email" name="email" placeholder="Email" required>
+      <input type="password" id="contrasena" name="password" placeholder="Password" required>
+      <div class="button-container">
+      <button type="button" id="boton">Login</button><br>
+    </div>
+    </form><br><br>
+
+    <div class="bottom-container">
+      <div class="row">
+        <div class="col">
+          <a href="../SignUp/SignUp.html" style="color:white" class="btn">Sign up</a>
+        </div>
+        <div class="col">
+          <a href="ForgotPassword.html" style="color:white" class="btn">Forgot password?</a>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="Login.js"></script>
+    <script src="../Js/Validar.js"></script>
+  </div>
+</body>
+</html>
