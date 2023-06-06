@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de ventas</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/Buy.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a nuestro E-commerce de Artesanías</h1>
+        <p>Descubre y adquiere increíbles creaciones hechas a mano</p>
+    </header>
+      <a href="../home.html">
+        <img src="../Images/Home.png" alt="Volver a otra página" style="position: fixed; top: 10px; left: 10px; width: 50px; height: 50px;">
+      </a>
+    <h1>Selección de productos</h1>
+    
+    <div id="productos">
+        <!-- Aquí se mostrarán los productos disponibles -->
+    </div>
+    
+    <h2>Carrito de compras</h2>
+    
+    <div id="carrito">
+        <!-- Aquí se mostrarán los productos agregados al carrito -->
+    </div>
+    
+    <h2>Medio de pago</h2>
+    
+    <label for="medioPago">Seleccionar medio de pago:</label>
+    <select id="medioPago" name="medioPago">
+        <!-- Opciones de medios de pago -->
+        <option value="tarjeta">Tarjeta de crédito</option>
+        <option value="transferencia">Transferencia bancaria</option>
+        <!-- Agregar más opciones según sea necesario -->
+    </select><br><br>
+    
+    <button onclick="realizarPago()">Pagar</button>
+    
+    <script>
+        var productosSeleccionados = [];
+        
+        function agregarAlCarrito(producto) {
+        productosSeleccionados.push(producto);
+        actualizarCarrito();
+        }
+        
+        function actualizarCarrito() {
+        var carritoDiv = document.getElementById("carrito");
+        carritoDiv.innerHTML = "";
+        
+        for (var i = 0; i < productosSeleccionados.length; i++) {
+            var producto = productosSeleccionados[i];
+            
+            var productoDiv = document.createElement("div");
+            productoDiv.innerHTML = producto.nombre;
+            carritoDiv.appendChild(productoDiv);
+        }
+        }
+        
+        function realizarPago() {
+        // Lógica para procesar el pago con el medio seleccionado
+        // Obtener el valor seleccionado del medio de pago desde el select "medioPago"
+        // Realizar el pago con la información del carrito y el medio de pago seleccionado
+        // Reiniciar el carrito y mostrar mensaje de confirmación
+        productosSeleccionados = [];
+        actualizarCarrito();
+        alert("Pago realizado con éxito");
+        }
+    </script>
+</body>
+</html>
