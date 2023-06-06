@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de administración</title>
+    <link rel="stylesheet" type="text/css" href="../Styles/Create.css">
+</head>
+<body>
+    <div id="alert-container"></div> <!-- Nuevo elemento para mostrar las alertas -->
+    <header>
+        <h1>Bienvenido a nuestro E-commerce de Artesanías</h1>
+        <p>Descubre y adquiere increíbles creaciones hechas a mano</p>
+    </header>
+    <a href="../home.html">
+        <img src="../Images/Home.png" alt="Volver a otra página" style="position: fixed; top: 10px; left: 10px; width: 50px; height: 50px;">
+    </a>
+    <div class="container">
+    <h1>Administración de productos</h1>
+    <form id="transactionFom">
+        <label for="ean">Código EAN:</label>
+        <input type="text" id="ean" name="ean"><br>
+        
+        <label for="nombre">Nombre del producto:</label>
+        <input type="text" id="nombre" name="nombre"><br>
+        
+        <label for="descripcion">Descripción del producto:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" cols="50"></textarea><br>
+        
+        <label for="marca">Marca de la artesanía:</label>
+        <input type="text" id="marca" name="marca"><br>
+        
+        <label for="foto">Foto asociada:</label>
+        <input type="file" id="foto" name="foto" accept="image/*"><br>
+        
+        <label for="unidades">Número de unidades disponibles:</label>
+        <input type="number" id="unidades" name="unidades"><br><br>
+        
+        <div class="button-container">
+            <button type="button" id="boton">Crear Producto</button><br>
+        </div>
+    </form>
+    <script type="module" src="Create.js"></script>
+    <script type="module" src="../ConsultProduct/Consult.js"></script>
+    </div>
+</body>
+</html>
